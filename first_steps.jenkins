@@ -1,5 +1,5 @@
 #!groovy
-// Check ub1 properties
+// Check len-virtualbox properties
 properties([disableConcurrentBuilds()])
 
 pipeline {
