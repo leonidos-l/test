@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 
 RUN apt-get -y update
 RUN apt-get -y install apache2
+RUN apt-get -y mc
 
 RUN echo 'Hello World from Docker!' > /var/www/html/index.html
 
