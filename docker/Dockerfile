@@ -1,7 +1,10 @@
-FROM ubuntu:latest
-MAINTAINER Leonid
-RUN apt-get update
-RUN apt-get install nginx
-ADD ./nginx.conf /etc/nginx/
+FROM ubuntu:16.04
+
+RUN apt-get -y update
+RUN apt-get -y install apache2
+
+RUN echo 'Hello World from Docker!' > /var/www/html/index.html
+
+
+CMD ["/usr/sbin/apache2ctl", "-D","FOREGROUND"]
 EXPOSE 80
-CMD [nginx]
